@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#0">
+        <fieldset>
+            <legend>Form WD3</legend>
+            <div class="boxfield1">
+                <input type="text" id="first_name" name="first_name" required placeholder=" " pattern="[A-Za-z]{3,15}" maxlength="15" />
+                <label for="first_name">First Name</label>
+                <div class="mensg">
+                    Must be a valid name, just letters with at least 3 caracters.
+                </div>
+            </div>
+
+            <div class="boxfield2">
+                <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{3,15}" maxlength="15" />
+                <label for="last_name">Last Name</label>
+                <div class="mensg">Must be a valid name, just letters with at least 3 caracters.</div>
+
+            </div>
+
+            <div class="boxfield3">
+                <input type="email" id="email" name="email" required placeholder=" " />
+                <label for="email">Email Address</label>
+                <div class="mensg">Must be a valid email address.</div>
+            </div>
+
+            <div class="boxfield4">
+                <input type="tel" id="phone" name="phone" required placeholder=" " pattern="^0+[0-9]{9}" />
+                <label for="phone">Australian Phone number</label>
+                <div class="mensg">Your phone number must be 10 numbers starting with 0.</div>
+            </div>
+
+            <div class="boxfield5">
+                <input type="text" id="username" name="username" required placeholder=" " pattern="[A-Za-z0-9]{6}" maxlength="6" />
+                <label for="username">Username</label>
+                <div class="mensg">type an username with letters and numbers at least 6 caracters</div>
+            </div>
+
+            <div class="boxfield6">
+                <input type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                />
+                <label for="password">Password</label>
+                <div class="mensg">
+                    Password with at least 6 characters and at least one uppercase, one lowercase, and one number.
+                </div>
+            </div>
+
+            <div>
+                <input id="todaysDate" type='date' min='2018-10-10' max='2018-10-31' required placeholder=" "></input>
+                <div class="mensg">
+                    Must be a valid date from the current date to the end of October.
+                </div>
+            </div>
+
+            </div>
+
+            <input id="submit" type="submit" value="Submit Form" />
+
+        </fieldset>
+    </form>
+
+    <script src="code.js"></script>
+
+</body>
+
+</html>
