@@ -139,6 +139,7 @@ form > fieldset > div .mensg {
 div #todaysDate{
 width:100%;
 color: black;
+  padding-left: 50px;
 }
 
 form input[type="submit"] {
