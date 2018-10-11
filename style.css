@@ -173,7 +173,7 @@ body {
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 300px) {
+@media (max-width: 700px) {
   
   form > fieldset > div > label {
     opacity: 0.8;
