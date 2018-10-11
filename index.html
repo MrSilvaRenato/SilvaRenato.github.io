@@ -10,53 +10,54 @@
 </head>
 
 <body>
-    <form action="#0">
+    <form class="regform" id="regform1" action="#">
         <fieldset>
-            <legend>WD3 RenatoSilva WebForm</legend>
+            <legend>WD3 WebForm</legend>
             <div class="boxfield1">
-                <input type="text" id="first_name" name="first_name" required placeholder=" " pattern="[A-Za-z]{3,15}" maxlength="15" />
                 <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" required placeholder="First Name" pattern="[A-Za-z]{3,15}" maxlength="15" />
+
                 <div class="mensg">
                     Must be a valid name, just letters with at least 3 caracters.
                 </div>
             </div>
 
             <div class="boxfield2">
-                <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{3,15}" maxlength="15" />
                 <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required placeholder="Last Name" pattern="[A-Za-z]{3,15}"  maxlength="15" />
+
                 <div class="mensg">Must be a valid name, just letters with at least 3 caracters.</div>
 
             </div>
 
             <div class="boxfield3">
-                <input type="email" id="email" name="email" required placeholder=" " />
                 <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Email" />
                 <div class="mensg">Must be a valid email address.</div>
             </div>
 
             <div class="boxfield4">
-                <input type="tel" id="phone" name="phone" required placeholder=" " pattern="^0+[0-9]{9}" />
                 <label for="phone">Australian Phone number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Australian Phone" pattern="^0+[0-9]{9}" />
                 <div class="mensg">Your phone number must be 10 numbers starting with 0.</div>
             </div>
 
             <div class="boxfield5">
-                <input type="text" id="username" name="username" required placeholder=" " pattern="[A-Za-z0-9]{6}" maxlength="6" />
                 <label for="username">Username</label>
-                <div class="mensg">type an username with letters and numbers at least 6 caracters</div>
+                <input type="text" id="username" name="username" required placeholder="Username" pattern="[A-Za-z0-9]{4,}" maxlength="6" />
+                <div class="mensg">type an username with letters or numbers at least 4 caracters</div>
             </div>
 
             <div class="boxfield6">
-                <input type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                />
                 <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
                 <div class="mensg">
                     Password with at least 6 characters and at least one uppercase, one lowercase, and one number.
                 </div>
             </div>
 
             <div>
-                <input id="todaysDate" type='date' min='2018-10-10' max='2018-10-31' required placeholder=" "></input>
+                <input id="todaysDate" type='date' min='2018-10-10' max='2018-10-31' required placeholder=" " />
                 <div class="mensg">
                     Must be a valid date from the current date to the end of October.
                 </div>

@@ -1,6 +1,24 @@
+.regform{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto auto; 
+
+}
+
 form {
   max-width: 300px;
   margin: 0 auto;
+}
+
+input ~ :placeholder-shown{
+  opacity: 0;
+
+}
+
+label::after{
+  content: "*";
+  color:red;
+  font-size: 1.2em;
 }
 
 legend{
@@ -10,19 +28,21 @@ legend{
 
 form > fieldset > div {
   position: relative;
-  background: rgb(33, 248, 176);
-  border-bottom: 0.8px solid black;
+  background: rgba(83, 180, 245, 0.747);
+  border-bottom: 1px solid black;
+  text-align: center;
+  
+ 
 }
 form > fieldset > div > label {
-  opacity: 0.3;
+  opacity: 0.8;
   font-weight: bold;
-  position: absolute;
   top: 22px;
   left: 20px;
 }
 
 #submit:hover {
-background-color: rgba(0, 102, 255, 0.562);
+background-color: rgba(51, 166, 243, 0.918);
 transition-timing-function: ease-in-out;
 transition: 2s;
 
@@ -35,11 +55,12 @@ form > fieldset > div > input[type="password"],
 form > fieldset > div > input[type="date"]
  {
   width: 100%;
+  text-align: center;
   border: 0;
-  padding: 20px 20px 20px 50px;
+  padding: 20px 0px 20px 0px;
   background-color:bisque;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   font-style: bold;
 }
 form > fieldset > div > input[type="text"]:focus,
@@ -49,6 +70,7 @@ form > fieldset > div > input[type="password"]:focus,
 form > fieldset > div > input[type="date"]:focus {
   outline: 0;
   background: white;
+  z-index: 1;
 }
 form > fieldset > div > input[type="text"]:focus + label,
 form > fieldset > div > input[type="email"]:focus + label,
@@ -76,8 +98,8 @@ form > fieldset > div > input[type="tel"]:valid + label,
 form > fieldset > div > input[type="password"]:valid + label,
 form > fieldset > div > input[type="date"]:valid + label 
 {
-  
   opacity: 0;
+  
 }
 form > fieldset > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
 form > fieldset > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
@@ -138,4 +160,28 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 500px) and (max-width: 600px) {
+  
+  form > fieldset > div > label {
+    opacity: 0.8;
+    font-weight: bold;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    visibility: hidden;
+  }
+
+  
 }
