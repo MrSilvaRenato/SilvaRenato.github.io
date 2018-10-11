@@ -1,0 +1,188 @@
+.regform{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto auto; 
+
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input ~ :placeholder-shown{
+  opacity: 0;
+
+}
+
+label::after{
+  content: "*";
+  color:red;
+  font-size: 1.2em;
+}
+
+legend{
+    color:white;
+    font-size: 1.9em;
+}
+
+form > fieldset > div {
+  position: relative;
+  background: rgba(83, 180, 245, 0.747);
+  border-bottom: 1px solid black;
+  text-align: center;
+  
+ 
+}
+form > fieldset > div > label {
+  opacity: 0.8;
+  font-weight: bold;
+  top: 22px;
+  left: 20px;
+}
+
+#submit:hover {
+background-color: rgba(51, 166, 243, 0.918);
+transition-timing-function: ease-in-out;
+transition: 2s;
+
+}
+
+form > fieldset > div > input[type="text"],
+form > fieldset > div > input[type="email"],
+form > fieldset > div > input[type="tel"],
+form > fieldset > div > input[type="password"],
+form > fieldset > div > input[type="date"]
+ {
+  width: 100%;
+  text-align: center;
+  border: 0;
+  padding: 20px 0px 20px 0px;
+  background-color:bisque;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-style: bold;
+}
+form > fieldset > div > input[type="text"]:focus,
+form > fieldset > div > input[type="email"]:focus,
+form > fieldset > div > input[type="tel"]:focus,
+form > fieldset > div > input[type="password"]:focus,
+form > fieldset > div > input[type="date"]:focus {
+  outline: 0;
+  background: white;
+  z-index: 1;
+}
+form > fieldset > div > input[type="text"]:focus + label,
+form > fieldset > div > input[type="email"]:focus + label,
+form > fieldset > div > input[type="tel"]:focus + label,
+form > fieldset > div > input[type="password"]:focus + label,
+form > fieldset > div > input[type="date"]:focus + label {
+  opacity: 0;
+}
+form > fieldset > div > input[type="text"]:valid,
+form > fieldset > div > input[type="email"]:valid,
+form > fieldset > div > input[type="tel"]:valid,
+form > fieldset > div > input[type="password"]:valid,
+form > fieldset > div > input[type="date"]:valid 
+{
+  background: url(svgimage/svg.svg); /*my svg validation*/
+  transition-timing-function: ease-in-out;
+  transition: 1.5s;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: 9px 15px;
+}
+form > fieldset > div > input[type="text"]:valid + label,
+form > fieldset > div > input[type="email"]:valid + label,
+form > fieldset > div > input[type="tel"]:valid + label,
+form > fieldset > div > input[type="password"]:valid + label,
+form > fieldset > div > input[type="date"]:valid + label 
+{
+  opacity: 0;
+  
+}
+form > fieldset > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+form > fieldset > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+form > fieldset > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown),
+form > fieldset > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown),
+form > fieldset > div > input[type="date"]:invalid:not(:focus):not(:placeholder-shown)
+ {
+  background: rgba(245, 101, 101, 0.822);
+}
+form > fieldset > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > fieldset > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > fieldset > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > fieldset > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > fieldset > div > input[type="date"]:invalid:not(:focus):not(:placeholder-shown) + label {
+  opacity: 0;
+}
+form > fieldset > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .mensg,
+form > fieldset > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .mensg,
+form > fieldset > div > input[type="tel"]:invalid:focus:not(:placeholder-shown) ~ .mensg,
+form > fieldset > div > input[type="password"]:invalid:focus:not(:placeholder-shown) ~ .mensg,
+form > fieldset > div > input[type="date"]:invalid:focus:not(:placeholder-shown) ~ .mensg {
+  max-height: 200px;
+  padding: 10px 10px 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-style: bold;
+}
+form > fieldset > div .mensg {
+  max-height: 0;
+  transition: 0.28s;
+  overflow: hidden;
+  color: red;
+  font-style: italic;
+  background-color: black;
+}
+
+div #todaysDate{
+width:100%;
+color: black;
+padding-left:90px;
+}
+
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  background: black;
+  color: white;
+  border: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+body {
+  background: #333;
+  font-family: 'PT Sans', sans-serif;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 800px) {
+  
+  form > fieldset > div > label {
+    opacity: 0.8;
+    font-weight: bold;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    visibility: hidden;
+  }
+
+  
+}
